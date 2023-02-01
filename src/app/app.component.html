@@ -1,5 +1,14 @@
 <!--this is the template shell -&#45;&#45; our main html(?)-->
 
 <h1>{{title}}</h1>
-<app-heroes></app-heroes>
+
+<nav>
+<!--  turning user clicks into navigation :) -->
+  <a routerLink="/dashboard">Dashboard</a>
+  <br>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+
+<router-outlet></router-outlet>
+
 <app-messages></app-messages>

@@ -4,15 +4,12 @@
 
 <ul class = "heroes">
   <li *ngFor = "let hero of heroes">
-<!--    this list was super ugly before using the class.selected css -&#45;&#45; css put space/padding and all the goodies-->
-    <button [class.selected] = "hero === selectedHero" type = "button" (click) = "onSelect(hero)">
-      <span class = "badge">{{hero.id}}</span>
-      <span class = "name">{{hero.name}}</span>
-    </button>
+    <a routerLink="/detail/{{hero.id}}">
+      <span class = "badge">{{hero.id}}</span> {{hero.name}}
+    </a>
   </li>
 </ul>
 
-<app-hero-detail [hero] = "selectedHero"></app-hero-detail>
 
 <!--<div>-->
 <!--  <label for = "name"> Hero name: </label>-->
